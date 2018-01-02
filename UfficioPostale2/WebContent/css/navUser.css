@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+nav ul ul {
+/*	display:block;
+	*/display: none;
+	visibility:collapse;
+}
+
+nav ul li:hover > ul{
+	display:inline;
+	visibility:visible;
+}
+#omino{
+	display:none;
+}
+#nome{
+	font-family: "Google font thin";
+	font-size: 2ex;
+}
+
+#nome{
+	display:block;
+	height:25px;
+	width:25px;
+	float:right;
+	margin-top: 8px;
+	margin-right: 20px;
+	border:2px solid white;
+	border-radius:18px;
+	color:white;
+	/*aling:center; */ /* l'align sta definito nel div direttamente*/
+	padding:5px 3px 0px 5px;
+	font-weight: bold;
+	font-variant: small-caps;
+	/*background-color: #fffa9b;*/
+}

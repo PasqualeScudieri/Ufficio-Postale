@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+@font-face{
+    font-family: "Google font";
+    src: url('font/Roboto-Regular.ttf');
+}
+
+body {
+	background-color: #b2dfdb;;
+	color: /*#400080*/  black;
+	font-size: large;
+	font-family: "Google font" !important;
+}
+
+
+#mainDiv{
+	font-family: "Google font";
+}
+#loginDiv {
+	background-color: #f8f8f8;
+	max-width: 400px;
+	height: 500px;
+	margin: auto auto;
+	margin-top: 100px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#LogoUfficiale {
+	width: 150px;
+	margin-top: -75px;
+}
+
+.input {
+	width: 293px;
+	height: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: large;
+	border-style: none;
+	border-radius: 3px;
+	border: 2px solid silver;
+	padding-left: 7px;
+}
+/*
+input[type="radio"]{
+	width:30px;
+}*/
+
+#inputUser {
+	margin-top: 50px;
+}
+
+#bottone {
+	width: 300px;
+	height: 40px;
+	font-size: large;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color:#e0f2f1;
+	background-color: #4db6ac;
+	border-style: none;
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px #acacac;
+}
+
+.error {
+	margin-top: 40px;
+	margin-bottom: -30px;
+}
+a{
+	color:black;
+}
+
+a:hover {
+	color: black;
+}
+
+#registrati:link{
+	color: black;
+}
+
+@media screen and (max-device-width: 600px) {
+	
+	#loginDiv {
+		max-width:400px;
+	}
+	
+	
+}
+
+

@@ -1,0 +1,20 @@
+Luigi,Cutolo,via Sacra 27 Pompei(NA),Scafati,1970-12-16,425863,addettoSportello,SCGLVR70T56G813V
+Anna Maria,Caputo,via Giovanni XXIII 6 Scafati(SA),Nola,1968-03-27,426854,postino,MRANNA68C67I483W
+Giuseppe,Cavallaro,via Roma 29 Napoli(NA),Pisa,1967-09-06,423668,postino,CVLGPP67P06F839M
+Vincenzo,Novi,via Ugo Foscolo 10 Trecase (NA),Berlino,1972-08-30,429875,postino,NVOVCN72M30M280C
+Federico,Abate,via Martiri d'Ungheria Scafati(SA),Napoli,1983-01-26,426895,addettoSportello,BTAFRC83A26I483D
+Gennaro,Bianchi,via Spinelli 55 Pompei (NA),Scafati,1970-03-15,422923,addettoSportello,BNCGNR70C15G813A
+Mario,Galben,Via passanti 23 Scafati(SA),Bari,1958-02-14,785964,postino,GLBMRA58B14I483F
+Giuseppe,Abate,Via Roma 11 Pompei(NA),Benevento,1981-06-26,894596,postino,BTAGPP81H26G813B
+Eleonora,Boccia,via Sacra 47 Pompei(NA),Castellamare,1965-01-03,326878,postino,BTALNR65A43G813D
+Antonio,Conato,via Martiri d'Ungheria Scafati(SA),Pompei,1967-12-22,958640,postino,CNTNTN67T22I483R
+Pasquale,Scudieri,Via della Resistenza 51 Scafati(SA),Salerno,1984-05-19,254631,postino,ZZISNT84E59I483G
+Anna,Viscardi,via Roma 65 Pompei(NA),Pompei,1948-05-11,694811,postino,VSCNNA48E51G813A
+Antonio,Terrestre,Via della Resistenza 13 Scafati(SA),Salerno,1964-09-30,354189,postino,TRRNTN64P30I483H
+Federico,Boiano,Via Capone 42 Pompei(NA),Benevento,1977-10-22,145892,postino,BNOFRC77R22G813H
+Carlo,Abate,via Sacra 14 Pompei(NA),Bari,1959-11-26,741452,postino,BTACRL59S26G813V
+Anastasia,Ruocco,Via Lepre 10 Scafati(SA),Castellamare,1954-12-02,415267,addettoSportello,RCCNTS54T42I483C
+Mario,Esposito,Via Lepanto 70 Pompei(NA),Bari,1957-02-12,321564,addettoSportello,SPSMRA57B12G813O
+Francesco,Novi,via Sacra 84 Pompei(NA),Scafati,1988-09-30,212189,,NVOFNC88P30G813Q
+Eleonora,Scafuri,Via Lepre 15 Scafati(SA),Bari,1970-02-20,746231,,SCFLNR70B60I483B
+Mario,Abate,Via della Resistenza 8 Scafati(SA),Scafati,1978-04-19,541236,,BTAMRA78D19I483W

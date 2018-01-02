@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+#registraDiv {
+	background-color: #f8f8f8;
+	width: 550px;
+	height: 1000px;
+	margin: auto auto;
+	margin-top: 100px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#registraDiv table{
+	margin-top:30px;	
+
+}
+#registraDivAdmin table{
+	margin-top:30px;	
+
+}
+
+#registraDivAdmin {
+	background-color: #f8f8f8;
+	width: 550px;
+	height: 1200px;
+	margin: auto auto;
+	margin-top: 100px;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+
+table{
+	margin-left:30px;
+}
+
+table tr td {
+	min-width:170px;
+}
+
+.label{
+	margin-right:10px;
+}
+
+
+
+.Radiolabel{
+	float: left;
+	margin-top:6%;
+}

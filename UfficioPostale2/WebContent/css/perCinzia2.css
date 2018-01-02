@@ -1,0 +1,64 @@
+
+#sfondoDiv{
+	width:100%;
+	height:70px;
+	position:fixed;
+	top:0;
+	left:0;
+/*	border:1px solid black;
+	*/z-index:2;
+}
+
+.dialog{
+	box-shadow:rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+	border-radius: 2px;
+	width:50%;
+	min-width:350px;
+	height:130px;
+	margin-right:25%;
+	margin-left:25%;
+	background-color: #fefefe;
+	font-size: 14px;
+	padding:25px 30px 20px 30px;
+	color:#000000;
+	position:fixed;
+	z-index:3;
+}
+
+.dialogTitle{
+	font-size: x-large;
+	font-weight: 500px;
+	line-height: 2;
+	color: #2f2f2f;
+}
+
+.clear{
+	clear:both;
+}
+.dialog section{
+	height:70px;
+}
+.dialog a{
+	font-variant: small-caps;
+	font-weight: bold;
+	float:right;
+	color:black;
+	text-decoration: none;
+	z-index: 3;
+}
+
+.notificaLink{
+	float: left !important;
+}
+
+
+@media screen and (max-width: 500px){
+	/**********da aggiustare*****/
+	.dialog{
+		margin-left:50px;
+	}
+
+.dialog section{
+	height:80px;
+}
+}

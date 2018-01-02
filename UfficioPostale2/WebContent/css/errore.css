@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+#casa_errore {
+  height: 100px;
+  width: 100px;
+  float: right;
+  
+}
+
+.dialogTitle{
+  font-size: xx-large;
+  font-weight: 500px;
+  line-height: 2;
+  color: #2f2f2f;
+}
+
+.dialog{
+	height:200px;
+}
+
+.dialog section{
+	height:30px;
+	font-size:16px;
+}

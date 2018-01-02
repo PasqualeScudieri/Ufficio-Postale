@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+
+#bisogni{
+    font-family: "Google font light";
+    font-size: xx-large;
+    clear: both;
+/*     line-height:2; */
+/* 	width:500px; */
+	margin:90px auto;
+	maring-top:80px;
+	margin-left:30px;
+margin-bottom:25px;
+}
+
+
+.loghi:hover{
+	height: 250px;	
+}
+
+input[type="button"]{
+	width: 130px;
+	height: 40px;
+	font-size: large;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color:#e0f2f1;
+	background-color: #4db6ac;
+	border-style: none;
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px #acacac;
+}
+.appari{
+	display: none;
+}
+
+.titoloCosa{
+	font-family: "Google font thin";
+    font-size:2em;
+    line-height: 2;
+/* 	margin-left: 20px; */
+	margin-bottom:0px;	
+}
+
+.alCentro{
+	margin:0px auto;
+	height:250px;
+	max-width:900px;
+}
+.loghi{
+	height: 230px;
+	float:left;
+	margin:20px;
+
+}
+.clear{
+	clear: both;
+}
+.sottotitoloCosa{
+	font-family1:"Google font light";
+	font-size:20px;
+}
+
+.affianco{
+	max-width:600px;
+	float: left;
+	font-size: 18px;
+	margin-left:10px;
+/* 	background-color: pink; */
+}
+
+ul{
+ list-style-image: url('/UfficioPostale2/immagini/pieno.png');
+}
+
+ul ul{
+ list-style-image: url('/UfficioPostale2/immagini/vuoto.png');
+}
+
+

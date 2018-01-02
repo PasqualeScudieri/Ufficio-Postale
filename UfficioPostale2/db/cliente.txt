@@ -1,0 +1,50 @@
+Catello,Graziuso,SCTCNZ95S55Z133K,Via Velleca 57 Scafati(SA),Zurigo,1995-11-15
+Sara,Borriello,BRRSRA96P66C129X,Via Della Resistenza 57 Scafati(SA),Castellamare,1996-09-26
+Antonio,Borriello,BRRNTN96A09C129J,Via Della Resistenza 57 Scafati(SA),Castellamare,1996-01-09
+Emma,Boiano,BNOMME70A69G813G,Via Della Resistenza 57 Scafati(SA),Pompei,1970-01-29
+Antonio,Boiano,BNONTN59P30I483V,Via Bari 48 Scafati(SA),Scafati,1959-09-30
+Lorenzo,Bussola,BSSLNZ55C22A662M,Via Campania 48 Scafati(SA),Bari,1955-03-22
+Gennaro,Esposito,SPSGNR63B28A509Z,Via Cavallaro 77 Scafati(SA),Avellino,1963-02-28
+Lorenzo,Auricchio,RCCLNZ87T06A783C,Via Catalano 16 Scafati(SA),Benevento,1987-12-06
+Antonia,Boccia,BCCNTN81E69A783F,Via Cartiera 18 Scafati(SA),Benevento,1981-05-29
+Lorenzo,Conato,CNTLNZ83A06F839S,Via Buccino 7 Scafati(SA),Napoli,1983-01-06
+Andrea,Castaldo,CSTNDR89P02D615M,Via Aquino 62 Scafati(SA),Fisciano,1989-09-02
+Alissa,Raffone,RFFLSS49C71I483Z,Via Leonardo Da Vinci 1 Scafati(SA),Scafati,1949-03-31
+Sara,Caruso,CRSSRA85H62C129H,Via Melette 43 Scafati(SA),Castellamare,1985-05-22
+Giuseppe,Borriello,BRRGPP88T22G813A,Via Della Resistenza 57 Scafati(SA),Pompei,1988-12-22
+Pasquale,Scudieri,PSQSDR83B11G813V,Via Acquasalsa 22 Pompei(NA),Pompei,1983-02-11
+Luigi,Cutolo,LGUCTL91A16C125M,Via Carrara 31 Pompei(NA),Castellamare,1991-01-16
+Simona,Gargano,GRGSMN81E61D615H,Via Capone 11 Pompei(NA),Fisciano,1981-05-21
+Angela,Rossi,RSSNGL86A52H703O,Via Giuliana 88 Pompei(NA),Salerno,1986-01-12
+Carlo,Castaldo,CSTCRL70E28A662B,Via Grotta 71 Pompei(NA),Bari,1970-05-28
+Anna,Scudieri,SCDNNA87L49D615L,Via Lepanto 74 Pompei(NA),Fisciano,1987-07-09
+Gennaro,Abenante,BNNGNR86T04A662U,Via Europa 99 Scafati(SA),Bari,1986-12-04
+Marco,Bianchi,BNCMRC85C05A662E,Via Piave 45 Pompei(NA),Bari,1985-03-05
+Luigi,Bianchi,BNCLGU49C08A662C,Via Capone 78 Pompei(NA),Bari,1949-03-08
+Raffaella,Izzo,ZZIRFL79P70A662P,Via Acquasalsa 25 Pompei(NA),Bari,1979-09-30
+Emma,Castaldo,CSTMME78M49H703O,Via Fermi 13 Scafati(SA),Salerno,1978-08-09
+Lorenzo,Vitiello,VTLLNZ85C20G813Y,Via Foscolo 48 Scafati(SA),Pompei,1985-03-20
+Pasquale,Vitiello,VTLPQL83T06D615S,Via Europa 85 Scafati(SA),Fisciano,1983-12-06
+Giovanna,Gargano,GRGGNN60P51C129E,Via Grotta 50 Pompei(NA),Castellamare,1960-09-11
+Angela,Abenante,BNNNGL59S70A783Q,Via Giuliana 42 Pompei(NA),Benevento,1959-11-30
+Stefano,Auricchio,RCCSFN81A19C129X,Via Foscolo 41Scafati(SA),Castellamare,1981-01-19
+Luigi,Bennato,BNNLGU75A12G813L,Via Acquasalsa 44 Pompei(NA),Pompei,1975-01-12
+Simona,Rossi,RSSSMN59M56H703W,Via Lepre 7 Scafati(SA),Salerno,1959-08-16
+Andrea,Auricchio,RCCNDR83L11D615H,Via Lepanto 89 Pompei(NA),Fisciano,1983-07-11
+Marco,Verdi,VRDMRC83M07H703O,Via Grotta 52 Pompei(NA),Salerno,1983-08-07
+Giovanna,Mazzini,MZZGNN71C68A783D,Via Giuliana 63 Pompei(NA),Benevento,1971-03-28
+Luigi,Bennato,BNNLGU87H25H703M,Via Europa 44 Scafati(SA),Salerno,1987-06-25
+Pasquale,Izzo,ZZIPQL55C29C129O,Via Lepanto 76 Pompei(NA),Castellamare,1955-03-29
+Angela,Castaldo,CSTNGL90A54H703N,Via Carrara 77 Pompei(NA),Salerno,1990-01-14
+Gennaro,Bennato,BNNGNR88S12C129Q,Via Milano 19 Scafati(SA),Castellamare,1988-11-12
+Luigi,Verdi,VRDLGU89B19G813H,Via Fermi 14 Scafati(SA),Pompei,1989-02-19
+Emma,Bianchi,BNCMME58R58H703G,Via Giuliana 10 Pompei(NA),Salerno,1958-10-18
+Stefania,Rossi,RSSSFN77D61A662P,Via Foscolo 37 Scafati(SA),Bari,1977-04-21
+Raffaella,Vitiello,VTLRFL70S61G813M,Via Fermi 46 Scafati(SA),Pompei,1970-11-21
+Lorenzo,Gargano,GRGLNZ71M09H703J,Via Capone 1 Pompei(NA),Salerno,1971-08-09
+Giovanna,Abenante,BNNGNN84R58A783D,Via Lepanto 54 Pompei(NA),Benevento,1984-10-18
+Raffaella,Abate,BTARFL59B43A783W,Via Carrara 56 Pompei(NA),Benevento,1959-02-03
+Andrea,Vitiello,VTLNDR63M14G813T,Via Lepre 5 Scafati(SA),Pompei,1963-08-14
+Marco,Picariello,BNNMRC78B02G813O,Via Lepre 16 Scafati(SA),Pompei,1978-02-02
+Lorenzo,Mazzini,MZZLNZ76H15C129T,Via Capone 46 Pompei(NA),Castellamare,1976-06-15
+Raffaella,Verdi,VRDRFL80R69D615F,Via Fermi 78 Scafati(SA),Fisciano,1980-10-29

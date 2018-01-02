@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+/************triangolo*****************/
+
+#menu{
+	font-family:"Google font";
+	line-height: 2;
+}
+
+
+#numNotifiche{
+	color: white;
+	font-size:small;
+	height:18px;
+	width:18px;
+	background-color: /*#400080*/ /*#ffc107*/#f44336;
+	position:fixed;
+	right:110px;
+	top:10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#triangolo{
+	height: 40%;
+	float: right;
+	margin-top: 15px;
+	margin-right: 20px;
+ }
+
+#menu{
+	background-color: #eeeeee;
+	clear:both;
+	position:fixed;
+	right: 60px;
+	width:200px;	
+	box-shadow: 3px 3px 3px #9e9e9e;
+	display: none;
+	
+}
+
+#menu ul{
+	display:table;
+	border-collapse: collapse;
+	width:100%;
+	margin: 0;
+}
+
+#menu ul li{
+	list-style-type: none;
+	display:tableRow;
+	border-radius:1px;
+	width:195px;
+	margin:0px;
+	padding-left: 5px;
+}
+
+#menu ul li:hover{
+	background-color: #cccccc;
+	
+}
+
+#menu ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+/*#triangolo{
+	display: block !important;
+}
+*/
+
+/**************************************************/
+

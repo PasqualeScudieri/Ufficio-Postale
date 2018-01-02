@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+#nonCiSonoConti{
+	margin:35px;
+	color:gray;
+}
+
+#infoSection{
+	display: table;
+	margin-left: 35px;
+	float:left;
+	margin-bottom:20px;
+	margin-left:80px;
+}
+.PostaSection{
+	float:left;
+	margin-left:38px;	
+	width: 360px;
+}
+
+.PacchiSection{
+	float:left;
+	margin-left:38px;	
+	width: 200px;
+}
+/*
+.dataCons{
+	width:230px;
+}
+*/
+.clear{
+	clear:both;
+}
+
+#postadiv{
+	width:auto;
+}
+
+section p{
+	display: table-row;
+}
+
+span {
+	display: table-cell;
+	padding:5px;
+	padding-right:20px;
+}
+
+#contiSection{
+	float:left;
+	margin-top:-20px;
+	
+}

@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+.radioRegAd{
+	float:left;
+}
+
+input[type="radio"] {
+	
+	border-radius: 3px;
+	border: 2px solid silver;
+	padding-left: 7px;
+}
+
+input[type="radio"]{
+	-webkit-appearance: none;
+	/*-moz-appearance: none;
+	*/
+	border-style: none;	
+	width: 20px;
+    height: 20px;
+    border-radius: 20px;
+ 	display: inline-block;
+ 	border: 2px solid #b2dfdb;
+ 	outline-color:transparent;
+  
+}
+
+input[type="radio"]:checked{
+    border-color:#4db6ac; 
+}
+
+input[type='radio']:after {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+  	top: -5px; 
+    left: -4px; 
+	margin-top:-1px;
+   	position: relative;
+    background-color: #b2dfdb;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid transparent;
+}
+
+input[type='radio']:checked:after {
+	width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    top: -5px;
+    left: -4px;
+    position: relative;
+    background-color: #4db6ac;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border-color:#4db6ac;
+}/*
+.radioBP:after {
+	top:-4px !important; 
+}*/

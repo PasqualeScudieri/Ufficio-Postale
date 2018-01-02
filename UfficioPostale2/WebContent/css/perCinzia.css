@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+#benvenuto{
+	background-color:/*#d9d9d9*//*#ffc107*/ #4db6ac;
+	color:white;
+	font-family: "Google font thin";
+	font-size: xx-large;
+	font-weight:550;
+	padding:10px 10px;
+	margin-left:10px;
+}
+#prova{
+	clear:both;
+	height:20px;
+}
+
+#inzialiNascoste{
+	height: 60px;
+	width:60px;
+	border-radius:30px;
+	text-align:center;
+	border: 1px solid white;
+	float:left;
+	line-height:60px;
+	margin-right:20px;
+	margin-top:6px;
+	margin-left:10px;	
+}
+
+.title{
+	font-family: "Google font light";
+	font-size: x-large;
+	line-height:2;
+	clear:both;
+	margin-left:20px;
+}
+
+.clear{
+	clear:both;
+}
+.azioni{
+	width:220px;
+	height:270px;
+	background-color: /*#e6e6e6*/ /*#80cbc4*//*#e0f2f1*/#b2dfdb;
+	box-shadow: 2px 2px 2px grey;
+	float:left;
+	margin: 10px 0px 20px 20px;
+	
+}
+.frecciaIcon{
+	background-color: /*#00bfa5*/ #00acc1;
+	width:33px;
+	height:33px;
+	border-radius:33px;
+	float:right;
+	margin-right:15px;
+	bottom:5px;
+	
+}
+
+.azioni:hover{
+	box-shadow:4px 4px 8px #a6a6a6;
+}
+
+.azioni header{
+	font-family: "Google font thin";
+	background-color:#80cbc4;
+	font-size: x-large;
+	margin-bottom:15px;
+}
+.azioni section{
+	padding:10px;
+	height:140px;
+}
+.azioni header span{
+	display:block;
+	padding-left:7px;
+	/*padding-top:15px;
+	*/line-height: 2;
+}
+
+#saldoDiv{
+	/*width:100%;
+	*/background-color:/*#eeeeee*/#80cbc4;
+	line-height: 2;
+	font-family: "Google font light";
+	font-size: x-large;
+	margin-left:10px;
+	
+}
+
+#saldoDiv span{
+	padding:10px;
+	margin:5px;
+}
