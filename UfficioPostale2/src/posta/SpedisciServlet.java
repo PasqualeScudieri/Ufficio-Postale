@@ -17,8 +17,8 @@ import bean.PostaBean;
 import model.PacchiModel;
 import model.PostaModel;
 
-/**
- * Servlet implementation class SpedisciServlet
+/**Questa servlet riceve i dati da spedisci.jsp e nel caso siano 
+ * validi ne effettua l’inserimento usando i servizi di PostaModel e pacchiModel.
  */
 @WebServlet("/cliente/SpedisciServlet")
 public class SpedisciServlet extends HttpServlet {
@@ -40,15 +40,18 @@ public class SpedisciServlet extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		doPost(request, response);
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "cf", "destinatario", "indirizzo" e "tipo"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cf=((ClienteBean)request.getSession().getAttribute("cliente")).getCf();
 		String dest= request.getParameter("dest");
 		String indirizzo= request.getParameter("indirizzo");
 
+		System.out.println("sssssssssssssssssssss");
+		
 		String error="";
 		if(dest==null || dest.equals("") ) {
 			 error += "metti un destinatario valido <br>";
@@ -87,7 +90,7 @@ public class SpedisciServlet extends HttpServlet {
 		}
 		
 		String tipo= request.getParameter("tipo");
-		//System.out.println("tipo: " + tipo);
+		System.out.println("tipo: " + tipo);
 		if(!tipo.equals("raccomandate") && !tipo.equals("pacchi") && !tipo.equals("lettere")) {
 			error+= "inserisci un tipo valido";
 			request.setAttribute("error",error);

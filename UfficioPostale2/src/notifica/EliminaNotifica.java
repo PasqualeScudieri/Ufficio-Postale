@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.NotificheModel;
 
-/**
- * Servlet implementation class ConsegnaServlet
+/**Questa servlet si occupa di portare a termine l’eliminazione di una notifica una volta che questa 
+ * è stata visualizzata da un cliente. Per fare questo utilizza i servizi offerti dalla classe NotificaModel.
  */
 @WebServlet("/cliente/EliminaNotifica")
 public class EliminaNotifica extends HttpServlet {
@@ -27,8 +27,9 @@ public class EliminaNotifica extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+    /**Metodo chiamato dalla jsp
+	 * @param request  nella request deve essere settato il parametro "codice"
+	 * @param response la response che viene restituita
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cod= request.getParameter("backFrom");

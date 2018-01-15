@@ -16,6 +16,10 @@ import it.unisa.DriverManagerConnectionPool;
 
 public class PostePayModel {
 
+	/**Ritorna l'elenco delle PostePay intestate al cliente
+	 * @param cf il codice fiscale del cliente
+	 * @return ritorna l'ArrayList in cui ogni PostePayBean contiene informazioni su una PostePay
+	 * */
 	public synchronized ArrayList<postePayBean> cercaPerCf(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -84,6 +88,10 @@ public class PostePayModel {
 	}
 	
 	
+	/**Ritorna il postePayBean con le informazioni sulla posrtePay con un dato iban
+	 * @param postePay l'iban della PostePay
+	 * @return Ritorna il postePayBean con le informazioni sulla posrtePay
+	 * */
 	public synchronized postePayBean cercaByIban(String postePay) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -121,6 +129,11 @@ public class PostePayModel {
 		return ppBean;
 		}
 	
+	
+	/**Memorizza le informazioni su una nuova PostePay
+	 * @param iban l'iban della nuova PostePay
+	 * @param cod il codice della nuova PostePay
+	 * */
 	public synchronized void creaPostePay(String iban, int cod) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

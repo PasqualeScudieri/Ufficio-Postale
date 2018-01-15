@@ -29,8 +29,9 @@ public class UtenteServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+    /**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri 
+	 * @param response la response che viene restituita
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

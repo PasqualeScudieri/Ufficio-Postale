@@ -27,6 +27,9 @@
 						if(name == null ){
 							
 							name=(String)request.getAttribute("user");
+							if(name==null){
+								name="";
+							}
 							System.out.println("pasquale");
 						}
 				

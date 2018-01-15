@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.NotificheModel;
 
-/**
- * Servlet implementation class NoServiziInternetServlet
+/**Questa servlet viene ha il compito di inviare una notifica ad un cliente 
+ * che non ha i servizi internet attivi su un conto BancoPosta
  */
 @WebServlet("/dipendente/addetto/NoServiziInternetServlet")
 public class NoServiziInternetServlet extends HttpServlet {
@@ -35,8 +35,9 @@ public class NoServiziInternetServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "cf" , "matricola", "iban"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cf= request.getParameter("cf");

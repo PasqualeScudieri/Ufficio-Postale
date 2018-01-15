@@ -17,8 +17,8 @@ import bean.UtenteBean;
 import model.DipendentiModel;
 import model.UtenteModel;
 
-/**
- * Servlet implementation class RegistrazioneAdminServlet
+/**Questa servlet riceve di dati da RegistrazioneDipendenti.jsp e li elabora. Se i dati sono corretti utilizza i servizi di UtenteModel 
+ * e DipendenteModel per effettuare la registrazione, altrimenti passa alla jsp un messaggio d’errore.
  */
 @WebServlet("/gestore/RegistrazioneAdminServlet")
 public class RegistrazioneAdminServlet extends HttpServlet {
@@ -40,8 +40,9 @@ public class RegistrazioneAdminServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "nome", "cognome", "cf","indirizzo", "luogoNascita", "dataNascita", "matricola", "email"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String errore="";
@@ -66,8 +67,8 @@ public class RegistrazioneAdminServlet extends HttpServlet {
 		}
 		String email=request.getParameter("email");
 		if(email == null || email.trim().equals("")) {
-			errore+= "Inserisci cognome <br>"; 
-		}else if(!email.contains("@")){
+			errore+= "Inserisci email <br>"; 
+		}else if(!email.contains("@") || !email.contains(".")){
 			errore+= "Inserisci email valida <br>"; 
 		}else {
 			request.setAttribute("email", email);		
@@ -202,7 +203,9 @@ public class RegistrazioneAdminServlet extends HttpServlet {
 
 		if(mat == null || mat.trim().equals("")) {
 			errore+= "Inserisci la matricola <br>"; 
-		} else{
+		} else if(mat.length()!=6){
+			errore+= "Lunghezza matricola invalida <br>"; 		
+		}else{
 			
 			try {
 				matricola=Integer.parseInt(mat);

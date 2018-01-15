@@ -15,8 +15,8 @@ import bean.postePayBean;
 import model.ContoModel;
 import model.PostePayModel;
 
-/**
- * Servlet implementation class NuovaPostePayServlet
+/**Questa servlet riceve i dati dalla classe NuovaPostePayServlet.jsp e li processa. 
+ * Nel caso siano corretti utilizza i servizi di ContoModel e PostePayModel per effettuare l’inserimento.
  */
 @WebServlet("/cliente/NuovaPostePayServlet")
 public class NuovaPostePayServlet extends HttpServlet {
@@ -38,8 +38,9 @@ public class NuovaPostePayServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "codice" , "cf"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

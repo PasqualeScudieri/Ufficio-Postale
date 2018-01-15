@@ -82,8 +82,8 @@
 
 <!-- 						<input type="submit" id="etichetta" value="etichetta"> -->
 <!-- 					</form> -->
-					<a class="notificaLink" href="/UfficioPostale2/cliente/EtichettaServlet?codice=<%=request.getAttribute("codice")%>">etichetta</a>
-					<a href="/UfficioPostale2/cliente/spedisci.jsp">back</a>
+					<a  href="/UfficioPostale2/cliente/EtichettaServlet?codice=<%=request.getAttribute("codice")%>">etichetta</a>
+<!-- 					<a href="/UfficioPostale2/cliente/spedisci.jsp">back</a> -->
 					<div id="sfondoDiv"></div>
 				</div>
 		<%

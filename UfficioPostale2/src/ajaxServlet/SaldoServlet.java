@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import model.ContoModel;
 
 /**
- * Servlet implementation class SaldoServlet
+ * Questa servlet serve a portare a termine la chiamata ajax che permette nella pagina di Giroconto o Bancoposta di visualizzare 
+ * il saldo corrispondente all'iban selezionato 
  */
 @WebServlet("/cliente/SaldoServlet")
 public class SaldoServlet extends HttpServlet {
@@ -34,8 +35,9 @@ public class SaldoServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request dev'essere setato il paramentro "iban"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

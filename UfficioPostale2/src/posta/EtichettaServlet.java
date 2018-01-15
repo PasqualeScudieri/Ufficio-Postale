@@ -36,8 +36,7 @@ import com.itextpdf.text.Jpeg;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
-/**
- * Servlet implementation class EtichettaServlet
+/**Questa servlet ha il compito di costruire il documento pdf che costituisce l’etichetta che il cliente dovrà stampare
  */
 @WebServlet("/cliente/EtichettaServlet")
 public class EtichettaServlet extends HttpServlet {
@@ -51,8 +50,9 @@ public class EtichettaServlet extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "cliente" e "codice"
+	 * @param response la response che viene restituita
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -199,6 +199,7 @@ public class EtichettaServlet extends HttpServlet {
 				String str=PostaModel.spedizioneDataOra.getDayOfMonth()+"/"+PostaModel.spedizioneDataOra.getMonth().getValue()+"/" +PostaModel.spedizioneDataOra.getYear()+ " "+ PostaModel.spedizioneDataOra.getHour()+ ":"+ PostaModel.spedizioneDataOra.getMinute();
 				document.add(new Paragraph(str, f));
             }else {
+            	document.add(new Paragraph("\n"));
             	Jpeg img2=new Jpeg(new URL("http://localhost:8080/UfficioPostale2/immagini/forbici.jpg"));
             	img2.scalePercent(80);
             	document.add(img2);

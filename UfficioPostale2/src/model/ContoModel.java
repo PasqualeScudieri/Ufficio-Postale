@@ -11,6 +11,10 @@ public class ContoModel {
 	
 	private static int numero=10001;
 
+	/**ritorna il saldo di un conto
+	 * @param iban l'iban del conto
+	 * @return ritorna il saldo del conto
+	 * */
 	public synchronized int cercaSaldo(String iban) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -42,6 +46,10 @@ public class ContoModel {
 		return saldo;
 	}
 
+	/**ritorna true se esiste un conto con quell'iban, false altrimenti
+	 * @param iban l'iban del conto
+	 * @return ritorna true se esiste un conto con quell'iban, false altrimenti
+	 * */
 	public synchronized boolean cercaConto(String iban) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -71,7 +79,10 @@ public class ContoModel {
 		return trovato;
 	}
 
-	
+	/**Memorizza informazioni su un nnuovo conto intestato ad un cliente
+	 * @param cf il codice fiscale del cliente
+	 * @return ritorna l'iban del nuovo conto
+	 * */
 	public synchronized String creaConto(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -122,6 +133,10 @@ public class ContoModel {
 		return iban;
 	}
 	
+	/**Ritorna la somma dei saldi dei conti intestati al cliente
+	 * @param cf il codice fiscale del cliente
+	 * @return Ritorna la somma dei saldi dei conti intestati al cliente
+	 * */
 	public synchronized int cercaPerCf(String cf) throws SQLException{
 	    Connection connection = null;
 	    PreparedStatement preparedStatement = null;

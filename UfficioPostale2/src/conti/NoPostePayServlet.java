@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.NotificheModel;
 
-/**
- * Servlet implementation class NoPostePayServlet
+/**Questa servlet viene invocata da un addetto allo sportello quando questi decide 
+ * di mandare una notifica ad un cliente che non possiede una PostePay.
  */
 @WebServlet("/dipendente/addetto/NoPostePayServlet")
 public class NoPostePayServlet extends HttpServlet {
@@ -34,9 +34,10 @@ public class NoPostePayServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "cf" e "matricola"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

@@ -12,6 +12,10 @@ import it.unisa.DriverManagerConnectionPool;
 
 public class OperazioniModel {
 
+	/**Restituisce l'elenco delle operazioni in cui è coinvolto un conto
+	 * @param iban l'iban del conto
+	 * @return Restituisce l'elenco delle operazioni in cui è coinvolto il conto
+	 * */
 	public synchronized ArrayList<OperazioniBean> cercaOperazioni(String iban) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -80,6 +84,11 @@ public class OperazioniModel {
 		
 	}
 	
+	/** Memorizza una nuova operazione
+	 * @param ibanFrom l'iban del conto da cui sono prelevati i soldi
+	 * @param ibanTo l'iban del conto su cui vengono versati i soldi
+	 * @param importo l'importo trasferito
+	 * */
 	public synchronized void Operazione(String ibanFrom, String ibanTo, Double importo) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import model.ContoModel;
 import model.OperazioniModel;
 
-/**
- * Servlet implementation class BonificoServlet
+/**Questa servlet riceve i dati da Bonifico.jso, li processa 
+ * e nel caso i valori risultino ammissibili utilizza i servizi di OperazioniModel per effettare l’inserimento.
  */
 @WebServlet("/cliente/BonificoServlet")
 public class BonificoServlet extends HttpServlet {
@@ -36,8 +36,9 @@ public class BonificoServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "ibanFrom" , "ibanTo", "importo"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

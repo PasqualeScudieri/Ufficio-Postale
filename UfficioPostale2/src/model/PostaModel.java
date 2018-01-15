@@ -16,6 +16,11 @@ public class PostaModel {
 	
 	public static LocalDateTime spedizioneDataOra=CalcolaDataSped.domaniAlle15(); 
 	
+	/**Inserisce la data di cosnegna della posta
+	 * @param data la data di consegna
+	 * @param codice il codice della posta consegnata
+	 * @param dipendente la matricola del postino che ha effettuato la consegna
+	 * */
 	public synchronized void aggiornaConsegna(java.util.Date data, int codice, int dipendente) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -40,6 +45,10 @@ public class PostaModel {
 		}
 	}
 	
+	/**Ritorna le informazioni sulla posta con quel codice
+	 * @param codice il codice della posta
+	 * @return un PostaBean con le informazioni sulla posta con quel codice
+	 * */
 	public synchronized PostaBean cercaByCodice(int codice) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -86,6 +95,10 @@ public class PostaModel {
 		return posta;
 	}
 	
+	/**Ritorna l'elenco della posta mandata da un cliente
+	 * @param cf il codice fiscale del cliente
+	 * @return Ritorna l'elenco della posta mandata da un cliente
+	 * */
 	public synchronized ArrayList<PostaBean> cercaPerCfMit(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -197,6 +210,11 @@ public class PostaModel {
 		return arrayPosta;
 	}
 */
+	
+	/**Memorizza le informazioni su una nuova posta spedita
+	 * @param posta il bean con le informazioni sulla posta
+	 * @return ritorna il codice della posta
+	 * */
 	public synchronized int inserisciInPo(PostaBean posta) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

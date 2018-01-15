@@ -12,11 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import bean.DipendentiBean;
+import bean.UtenteBean;
 import model.DipendentiModel;
 import model.UtenteModel;
 
-/**
- * Servlet implementation class CompletaRegistrazione
+/**Questa servlet riceve i dati da completaRegistrazioneDip.jsp 
+ * e utilizza i servizi di utente model e dipendente model per completare la registrazione.
  */
 @WebServlet("/CompletaRegistrazione")
 public class CompletaRegistrazione extends HttpServlet {
@@ -38,8 +39,10 @@ public class CompletaRegistrazione extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "username" e "password"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -50,6 +53,32 @@ public class CompletaRegistrazione extends HttpServlet {
 		String password= (String)request.getParameter("password");
 		
 		String errore="";
+		
+		UtenteModel modelU= new UtenteModel();
+		DipendentiModel modelD= new DipendentiModel();
+		DipendentiBean dip=null;
+		int matricola;
+		try {
+			matricola=Integer.parseInt(user);
+			dip=modelD.cercaByMatricola(matricola);
+			if(dip.getNome()=="" ) {
+				System.out.println("MENTE LA PRIMA");
+				errore+="username non valido <br>";
+			}else {
+				UtenteBean utente= modelU.doRetrieveByUser(user);
+				if (utente.getPassword() != null && !utente.getPassword().trim().equals("") ) {
+					System.out.println("MENTE LA SECONDA");
+					System.out.println("_"+utente.getPassword()+"_");
+					errore+="username non valido <br>";					
+				}
+			}
+		
+		} catch (NumberFormatException | NullPointerException |SQLException e ) {
+			System.out.println("MENTE L?ECCEZUOINE");
+			errore+="username non valido <br>";
+		}
+		
+		
 		if(password == null || password.trim().equals("")) {
 			errore+= "Inserisci password <br>";
 		}else if(password.length()<2 || password.length()>50){
@@ -75,12 +104,12 @@ public class CompletaRegistrazione extends HttpServlet {
 		}
 
 		try {
-			UtenteModel modelU= new UtenteModel();
+			//UtenteModel modelU= new UtenteModel();
 			modelU.setPasswordDip(user, password);
-			DipendentiModel modelD= new DipendentiModel();
-			int matricola=Integer.parseInt(user);
-			
-			DipendentiBean dip=modelD.cercaByMatricola(matricola);
+			//DipendentiModel modelD= new DipendentiModel();
+//			int matricola=Integer.parseInt(user);
+//			
+//			DipendentiBean dip=modelD.cercaByMatricola(matricola);
 			boolean loggato=true;
 			HttpSession session= request.getSession();
 			

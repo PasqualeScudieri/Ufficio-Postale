@@ -9,6 +9,11 @@ import bean.PacchiBean;
 import it.unisa.DriverManagerConnectionPool;
 
 public class PacchiModel {
+	
+	/**Ritorna le informazioni sul pacco con quel codice
+	 * @param codice il codice del pacco
+	 * @return un PacchiBean con le informazioni sul pacco con quel codice
+	 * */
 	public synchronized PacchiBean cercaPacco(int codice) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -40,6 +45,9 @@ public class PacchiModel {
 		return pacco;
 	}
 
+	/**Memorizza le informazioni su un nuovo Pacco
+	 * @param pacchi il bean con le informazioni sul nuovo pacco
+	 * */
 	public synchronized void inserisciInPa(PacchiBean pacchi) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

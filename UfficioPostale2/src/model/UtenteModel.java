@@ -10,9 +10,9 @@ import it.unisa.DriverManagerConnectionPool;
 import bean.UtenteBean;
 
 public class UtenteModel {
-	/*
-	 * ma qua non dovrei fare il controllo del se esite il cliente con quel cf
-	 * oppure mi faccio il controllo sulla esl exception? ammesso che si possa fare
+	
+	/**Memorizza le informazioni su nuovo utente
+	 * @param utente il bean con le informazioni sull'utente
 	 * */
 	public synchronized void doSave(UtenteBean utente) throws SQLException{
 		Connection connection = null;
@@ -40,6 +40,11 @@ public class UtenteModel {
 		}
 	}
 	
+	/**Ritorna le informazioni sull'utente con un certo user e password  se esiste
+	 * @param user l'username dell'utete
+	 * @param password la password dell'utente
+	 * @return il bean con le informazioni sull'utente con un certo user e password. Se non esiste il bean contiene campi vuoti
+	 * */
 	public synchronized UtenteBean esisteUser(String user, String password) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -71,8 +76,9 @@ public class UtenteModel {
 		return utente;
 	}
 	
-	/*
-	 * Qua devo fare il controllo su null caso mai nn esiste?
+	/**Ritorna il bean con le informazioni sull'utente con un dato username
+	 * @param user l'username dell'utente 
+	 * @return Ritorna il bean con le informazioni sull'utente.
 	 * */
 	public synchronized UtenteBean doRetrieveByUser(String user) throws SQLException{
 		Connection connection = null;
@@ -103,6 +109,11 @@ public class UtenteModel {
 		return utente;
 	}
 
+	
+	/**Ritorna true se esiste un utente con quel codice fiscale, falso altrimenti
+	 * @param cf il codice fiscale dell'utente
+	 * @return Ritorna true se esiste un utente con quel codice fiscale, falso altrimenti
+	 * */
 	public synchronized boolean esisteCf(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -131,7 +142,10 @@ public class UtenteModel {
 		return esiste;
 	}
 
-	
+	/**Setta la password del dipendente
+	 * @param name l'username del dipendente
+	 * @param password la password del dipendente
+	 * */
 	public synchronized void setPasswordDip(String name, String password) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

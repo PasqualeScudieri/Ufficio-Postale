@@ -18,8 +18,8 @@ import bean.UtenteBean;
 import model.ClienteModel;
 import model.UtenteModel;
 
-/**
- * Servlet implementation class RegistratiServlet
+/**Questa servlet riceve di dati da Registrazione.jsp e li elabora. Se i dati sono corretti utilizza i servizi di UtenteModel
+ *  e ClienteModel per effettuare la registrazione, altrimenti passa alla jsp un messaggio d’errore.
  */
 @WebServlet("/RegistratiServlet")
 public class RegistratiServlet extends HttpServlet {
@@ -41,8 +41,9 @@ public class RegistratiServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "nome", "cognome", "cf","indirizzo", "luogoNascita", "dataNascita", "username" e "password"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

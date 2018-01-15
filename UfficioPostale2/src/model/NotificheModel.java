@@ -11,6 +11,10 @@ import it.unisa.DriverManagerConnectionPool;
 
 public class NotificheModel {
 
+	/**Ritorna l'elenco delle notifiche di un cliente
+	 * @param cf il dofice fiscale del cliente
+	 * @return l'arrayList in cui ogni NotificaBean contine informazioni su una notifica
+	 * */
 	public synchronized ArrayList<NotificheBean> cercaByCf(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -46,6 +50,13 @@ public class NotificheModel {
 		return array;
 	}
 	
+	/**Memorizza le informazioni su una notifica
+	 * @param cliente il codice fiscale del cliente
+	 * @param matricola la matricola del dipendente
+	 * @param tipo il tipo di notifica
+	 * @param iban l'iban del conto a cui è riferita la notifica
+	 * @param codPosta il codice della posta a cui è riferita la notifica 
+	 * */
 	public synchronized void inserisciNotifica(String cliente, int matricola, String tipo, String iban, int codPosta) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -73,6 +84,9 @@ public class NotificheModel {
 		}
 	}
 
+	/**Rimuove la notifica con quel codice
+	 * @param codice il codice della notifica
+	 * */
 	public synchronized void cancellaNotifica(int codice) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

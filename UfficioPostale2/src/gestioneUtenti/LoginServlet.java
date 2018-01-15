@@ -18,8 +18,8 @@ import model.ClienteModel;
 import model.DipendentiModel;
 import model.UtenteModel;
 
-/**
- * Servlet implementation class LoginServlet
+/**Questa servlet si occupa di ricevere i dati dalla jsp di login 
+ * elaborarli e decidere se consentire o no l’accesso all’area personale.
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -44,8 +44,9 @@ public class LoginServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "username" e "password"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//doGet(request, response);
@@ -154,6 +155,7 @@ public class LoginServlet extends HttpServlet {
 			return;
 		}else if(tipo.equals("gestore")) {
 			request.getSession().setAttribute("gestore", "true");
+			request.getSession().setAttribute("username", utente.getUser());
 			response.sendRedirect("/UfficioPostale2/gestore/homegestore.jsp");
 			
 		}

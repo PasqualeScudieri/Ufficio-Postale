@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.NotificheModel;
 
 /**
- * Servlet implementation class NoBancoPostaServlet
+ * Questa servlet si occupa di mandare una notifica ad un cliente che non ha un BancoPosta usando i servizi di NotificaModel
  */
 @WebServlet("/dipendente/addetto/NoBancoPostaServlet")
 public class NoBancoPostaServlet extends HttpServlet {
@@ -35,8 +35,9 @@ public class NoBancoPostaServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "cf" e "matricola"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

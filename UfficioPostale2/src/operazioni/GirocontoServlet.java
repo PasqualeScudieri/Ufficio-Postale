@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.OperazioniModel;
 
-/**
- * Servlet implementation class OperazioneServlet
+/**Questa servlet riceve i dati da Giroconto.jso, 
+ * li processa e nel caso i valori risultino ammissibili effettua inserimento.
  */
 @WebServlet("/cliente/GirocontoServlet")
 public class GirocontoServlet extends HttpServlet {
@@ -35,11 +35,22 @@ public class GirocontoServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "ibanFrom" , "ibanTo", "importo"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String s= ControlloIbanFromTo.controlloIban(request, response);
+		if(s.equals("page")) {
+		    RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/cliente/Giroconto.jsp");
+		    dispatcher.forward(request, response);
+		    return;
+		}else if(s.equals("error")) {
+			RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/error.jsp");
+		    dispatcher.forward(request, response);
+		    return;
+		}
 		String ibanFrom= request.getParameter("from");
 		String ibanTo=request.getParameter("to");
 		
@@ -146,16 +157,6 @@ public class GirocontoServlet extends HttpServlet {
 		    return;
 		}
 		*/
-		String s= ControlloIbanFromTo.controlloIban(request, response);
-		if(s.equals("page")) {
-		    RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/cliente/Giroconto.jsp");
-		    dispatcher.forward(request, response);
-		    return;
-		}else if(s.equals("error")) {
-			RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/error.jsp");
-		    dispatcher.forward(request, response);
-		    return;
-		}
 		
 		OperazioniModel modelOp= new OperazioniModel();
 		try {

@@ -20,8 +20,8 @@ import model.NotificheModel;
 import model.PacchiModel;
 import model.PostaModel;
 
-/**
- * Servlet implementation class ConsegnaServlet
+/**Questa servlet riceve i dati da consegna.jsp, li processa e, nel caso risultino validi, richiede i servizi di PostaModel
+ *  per indicare che la posta con quel codice è stata consegnata dal postino in una certa data.
  */
 @WebServlet("/dipendente/postino/ConsegnaServlet")
 public class ConsegnaServlet extends HttpServlet {
@@ -43,8 +43,9 @@ public class ConsegnaServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "matricola" e "codice"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String mat= request.getParameter("matricola");

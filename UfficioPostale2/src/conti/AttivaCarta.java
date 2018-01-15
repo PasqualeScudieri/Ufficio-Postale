@@ -13,15 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 import bean.BancopostaBean;
 import model.BancoPostaModel;
 
-/**
- * Servlet implementation class AttivaCarta
+/**Questa servlet richiede i servizi di BancoPostaModel per associare una carta bancomat
+  *  ad un conto o per effettuare l’attivazione dei servizi internet.
  */
 @WebServlet("/cliente/AttivaCarta")
 public class AttivaCarta extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
+    /** 
+     *  @see HttpServlet#HttpServlet()
      */
     public AttivaCarta() {
         super();
@@ -36,8 +36,9 @@ public class AttivaCarta extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request e' richiesto che siano settati i parametri "carta", "iban", e "servizi internet"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String attivaC=request.getParameter("carta");

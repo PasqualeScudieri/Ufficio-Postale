@@ -13,6 +13,9 @@ import it.unisa.DriverManagerConnectionPool;
 
 public class ClienteModel {
 
+	/**Memorizza nel database  i dati relativi al cliente
+	 * @param cliente il ClienteBean con i dati del nuovo cliente
+	 * */
 	public synchronized void doSave(ClienteBean cliente) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -43,7 +46,10 @@ public class ClienteModel {
 		}
 	}
 	
-	
+	/**Ritorna i dati del cliente con un dato codice fiscale
+	 * @param cliente il codice fiscale del cliente
+	 * @return ritorna un ClienteBean con i dati del cliente 
+	 * */
 	public synchronized ClienteBean cercaByCliente(String cliente) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -78,6 +84,12 @@ public class ClienteModel {
 		return clienteBean;
 	}
 	
+	
+	/**Ritorna le informazioni sui clienti con un dato nome e cognome
+	 * @param nome il nome del cliente
+	 * @param cognome il cognome del cliente
+	 * @return ritorna l array con le informazioni su tutti i clienti con quel nome e cognome
+	 * */
 	public synchronized ArrayList<ClienteBean> cercaPerNomeECognome(String nome, String cognome) throws SQLException{
 
 		Connection connection = null;
@@ -118,7 +130,9 @@ public class ClienteModel {
 		return array;
 	}
 	
-	
+	/**ritorna l'elenco dei clienti senza PostePay
+	 * @return ritorna un ArrayList in cui ogni ClienteBean contiene informazioni su un cliente
+	 * */
 	public synchronized ArrayList<ClienteBean> cercaNoPostePay() throws SQLException{
 
 		Connection connection = null;
@@ -156,6 +170,9 @@ public class ClienteModel {
 		return array;
 	}
 	
+	/**ritorna l'elenco dei clienti senza BancoPosta
+	 * @return ritorna un ArrayList in cui ogni ClienteBean contiene informazioni su un cliente
+	 * */
 	public synchronized ArrayList<ClienteBean> cercaNoBancoPosta() throws SQLException{
 
 		Connection connection = null;
@@ -193,7 +210,9 @@ public class ClienteModel {
 		return array;
 	}
 	
-	
+	/**ritorna l'elenco dei clienti che hanno un BancoPosta senza servizi internet attivi
+	 * @return ritorna un ArrayList in cui ogni ClienteBean contiene informazioni su un cliente
+	 */
 	public synchronized ArrayList<ContoCliente> cercaNoServiziInternet() throws SQLException{
 
 		Connection connection = null;
@@ -233,7 +252,9 @@ public class ClienteModel {
 
 		return arrayC;
 	}
-	
+	/**ritorna l'elenco dei clienti che hanno un conto BancoPosta a cui non è associata una carta
+	 * @return ritorna un ArrayList in cui ogni ClienteBean contiene informazioni su un cliente
+	 * */
 	public synchronized ArrayList<ContoCliente> cercaNoCarta() throws SQLException{
 
 		Connection connection = null;

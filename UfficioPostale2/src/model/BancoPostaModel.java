@@ -10,7 +10,11 @@ import bean.BancopostaBean;
 import it.unisa.DriverManagerConnectionPool;
 
 public class BancoPostaModel {
-
+/**
+ * Questo metodo effettua la ricerca dei bancoposta intestati ad un cliente
+ * @param cf il codice fiscale del cliente
+ * @return ritrona l'array contiene i dati sui bancoposta intestati al cliente
+ * */
 	public synchronized ArrayList<BancopostaBean> cercaPerCf(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -77,6 +81,10 @@ public class BancoPostaModel {
 		return arrayBanc;
 	}
 	
+	/**ritorna le informazioni sul Bancoposta con quell'iban
+	 * @param bancoposta l'IBAN del BancoPosta
+	 * @return ritorna il BancopostaBean con le informazioni sul Bancoposta
+	 * */
 	public synchronized BancopostaBean cercaByIban(String bancoposta) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -110,6 +118,13 @@ public class BancoPostaModel {
 	}
 
 
+	/**Memorizza le informazioni passate come un BancoPsota
+	 * @param iban l'iban del nuovo BancoPosta
+	 * @param tasso il tasso del nuovo BancoPosta
+	 * @param costo il costo annuo del nuovo BancoPosta
+	 * @param carta indica se il BancoPosta ha o meno associata una carta bancomat
+	 * @param servInternet indica se i servizi internet sono attivi o meno
+	 * */
 	public synchronized void creaBancoPosta(String iban, double tasso, double costo, char carta, char servInternet ) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -137,6 +152,9 @@ public class BancoPostaModel {
 		}
 	}
 	
+	/**Attiva i servizi internet su un conto BancoPosta
+	 * @param iban l'iban del conto BancoPosta di cui si vogliono attivare i servizi internet
+	 * */
 	public synchronized void siServiziInternet(String iban) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -159,7 +177,9 @@ public class BancoPostaModel {
 		}
 	}	
 	
-	
+	/**Associa una carta al conto BancoPosta
+	 * @param iban l'iban del conto BancoPosta a cui vogliamo associare la carta
+	 * */
 	public synchronized void siCarta(String iban) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -182,6 +202,10 @@ public class BancoPostaModel {
 		}
 	}	
 	
+	/**Modifica il costo annuo di un BancoPosta
+	 * @param costo il nuovo costo annuo
+	 * @param iban l'iban del BancoPosta a cui va aggiornato il costo
+	 * */
 	public synchronized void aggiornaCosto(Double costo, String iban) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

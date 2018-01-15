@@ -10,6 +10,11 @@ import bean.DipendentiBean;
 import it.unisa.DriverManagerConnectionPool;
 
 public class DipendentiModel {
+	
+	/**Ritorna informazioni su un dipendente
+	 * @param cf il codice fiscale del dipendente
+	 * @return ritorna un DipendentiBean con le informazioni su dipendente
+	 * */
 	public synchronized DipendentiBean cercaByCf(String cf) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -46,6 +51,10 @@ public class DipendentiModel {
 		return dipendente;
 	}
 
+	/**Ritorna informazioni su un dipendente
+	 * @param matricola la matricola del dipendente
+	 * @return ritorna un DipendentiBean con le informazioni su dipendente
+	 * */
 	public synchronized DipendentiBean cercaByMatricola(int matricola) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -82,6 +91,9 @@ public class DipendentiModel {
 		return dipendente;
 	}
 
+	/**Memoriza le informazioni su un nuovo dipendente
+	 * @param dipendente il DipendentiBean con le informazioni sul nuovo dipendente
+	 * */
 	public synchronized void inserisciDipendente(DipendentiBean dipendente) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;

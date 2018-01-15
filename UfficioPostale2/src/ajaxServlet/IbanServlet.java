@@ -16,7 +16,8 @@ import model.BancoPostaModel;
 import model.PostePayModel;
 
 /**
- * Servlet implementation class IbanServlet
+ * Questa servlet serve a portare a termine la chiamata ajax che permette nella pagina di Giroconto di non avere l'iban selezionato
+ * nell'altra select 
  */
 @WebServlet("/cliente/IbanServlet")
 public class IbanServlet extends HttpServlet {
@@ -37,9 +38,10 @@ public class IbanServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	
+	/**Metodo utilizzato per la chiamata ajax
+	 * @param request  nella request devono essere setati i paramentri "iban" e "cf"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/xml");

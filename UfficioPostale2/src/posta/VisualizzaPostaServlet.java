@@ -17,8 +17,8 @@ import model.ClienteModel;
 import model.PacchiModel;
 import model.PostaModel;
 
-/**
- * Servlet implementation class VisualizzaPostaServlet
+/**Questa servlet riceve i dati visualizza.jsp, li processa e, 
+ * nel caso risultino ammissibili, recupera i dati desiderati e li passa a visualizza.jsp
  */
 @WebServlet("/dipendente/postino/VisualizzaPostaServlet")
 public class VisualizzaPostaServlet extends HttpServlet {
@@ -40,8 +40,9 @@ public class VisualizzaPostaServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "codice" 
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cod= request.getParameter("codice");

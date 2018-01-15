@@ -13,19 +13,9 @@ public class ControlloIbanFromTo {
 		public static String controlloIban(HttpServletRequest request, HttpServletResponse response) {
 			String ibanFrom= request.getParameter("from");
 			String ibanTo=request.getParameter("to");
-			
+			//System.out.println("incontrollo");
 			if(ibanFrom==null || ibanFrom.equals("")) {	
 				 String error="metti iban from valido";
-			      request.setAttribute("error",error);
-			      return "page";
-			}
-			if(ibanTo==null || ibanTo.equals("")) {	
-				 String error="metti iban to valido";
-			      request.setAttribute("error",error);
-			      return "page";
-			}
-			if(ibanFrom.equals(ibanTo)) {
-				  String error="metti iban diversi";
 			      request.setAttribute("error",error);
 			      return "page";
 			}
@@ -36,12 +26,23 @@ public class ControlloIbanFromTo {
 			      return "page";
 			}
 			
+			if(ibanTo==null || ibanTo.equals("")) {	
+				 String error="metti iban to valido";
+			      request.setAttribute("error",error);
+			      return "page";
+			}
+			
 			if(ibanTo.length()!=27) {
 				 String error="Iban to dev essere lungo 27 caratteri";
 			      request.setAttribute("error",error);
 			      return "page";
 			}
-			
+			if(ibanFrom.equals(ibanTo)) {
+				  String error="metti iban diversi";
+			      request.setAttribute("error",error);
+			      return "page";
+			}
+						
 			String imp= request.getParameter("importo");
 			double importo;
 			try {

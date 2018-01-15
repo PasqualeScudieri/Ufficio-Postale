@@ -9,8 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class LogoutServlet
+/**Questa servlet si occupa di invalidare la sessione per consentire il logut
  */
 @WebServlet("/LogoutServlet")
 public class LogoutServlet extends HttpServlet {
@@ -24,8 +23,9 @@ public class LogoutServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+    /**Metodo chiamato dalla jsp
+	 * @param request  la requwest che viene passata come parametro
+	 * @param response la response che viene restituita
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

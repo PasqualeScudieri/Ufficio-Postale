@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import model.NotificheModel;
 
 /**
- * Servlet implementation class NoCartaServlet
+ * Questa servlet utilizza i servizi di NotificaModel per effettuare l’invio di una notifica
+ *  ad un cliente che ha un conto Bancoposta a cui non è associata nessuna carta bancomat
  */
 @WebServlet("/dipendente/addetto/NoCartaServlet")
 public class NoCartaServlet extends HttpServlet {
@@ -35,8 +36,9 @@ public class NoCartaServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	/**Metodo chiamato dalla jsp
+	 * @param request  nella request devono essere setati i paramentri "cf", "matricola", "iban"
+	 * @param response la response che viene restituita
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

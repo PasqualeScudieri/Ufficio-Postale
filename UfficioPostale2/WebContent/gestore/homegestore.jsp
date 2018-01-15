@@ -13,7 +13,21 @@
 		<link type="text/css" href="/UfficioPostale2/css/index.css" rel= "stylesheet">
 		<link type="text/css" href="/UfficioPostale2/css/navUser.css" rel= "stylesheet">
 		<link type="text/css" href="/UfficioPostale2/css/perCinzia.css" rel= "stylesheet">
-		<link type="text/css" href="/UfficioPostale2/dipendente/css/homeAdmin.css" rel= "stylesheet">
+<!-- 		<link type="text/css" href="/UfficioPostale2/dipendente/css/homeAdmin.css" rel= "stylesheet"> -->
+<style type="text/css"> 
+
+ .azioni{ 
+ 	width: 270px; 
+ 	height:350px; 
+ } 
+ .azioni section{ 
+ 	height:220px; 
+ } 
+ 
+ #nome{
+ 	text-align:center;
+ }
+ </style>
 
 		<script type="text/javascript" src="/UfficioPostale2/script.js"></script>
 		<script type="text/javascript" src="/UfficioPostale2/cliente/user.js"></script>
@@ -24,14 +38,15 @@
 	
 <%-- 	<%	String type=((DipendentiBean)session.getAttribute("dipendente")).getTipo(); --%>
 <%-- 	%> --%>
+	<%String nome= (String)session.getAttribute("username");  %>
 	<%@ include file="navGestore.jsp" %>
 	
 	<div id="mainDiv">
 		
 		<div id="benvenuto">
-		<div id="inzialiNascoste"> SB </div>
+		<div id="inzialiNascoste"><%=nome.charAt(0)%> </div>
 		Benvenuto<br/>
-		Sara Borriello
+		<%=nome %>
 		</div>
 		
 		<div id="saldoDiv">
